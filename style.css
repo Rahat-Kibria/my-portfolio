@@ -95,6 +95,20 @@ body {
     padding: 0;
 }
 
+#cv-main {
+    font-family: 'Signika', sans-serif;
+    text-align: center;
+}
+
+#cv-main {
+    font-size: 1.5rem;
+}
+/* 
+#myPDF {
+    width: 90%;
+    height: 1075px;
+} */
+
 #footer {
     text-align: center;
     font-family: 'Alice', serif;

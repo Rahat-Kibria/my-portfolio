@@ -87,7 +87,7 @@ body {
     font-size: 1.5rem;
     display: block;
     width: fit-content;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #contact-main address p {

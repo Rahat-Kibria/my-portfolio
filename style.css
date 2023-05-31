@@ -1,7 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -18,7 +25,7 @@ body {
 }
 
 #header h1 {
-    font-size: xx-large;
+    font-size: 2rem;
     margin: 10px;
 }
 
@@ -39,7 +46,7 @@ body {
 #header nav>a {
     margin-right: 10px;
     text-decoration: none;
-    font-size: x-large;
+    font-size: 1.5rem;
     color: #551A8B;
 }
 
@@ -52,29 +59,30 @@ body {
 
 #main {
     font-family: 'Signika', sans-serif;
+    max-width: 900px;
+    width: 95%;
     text-align: justify;
     margin-top: 30px;
-}
-
-#main .table-center {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#main td>p {
-    font-size: x-large;
-    line-height: 1.5;
-    margin: 10px;
+    margin: 0 auto;
 }
 
 #main img {
     border-radius: 30%;
+    float: left;
+    margin-right: 20px;
+}
+
+#main p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 10px;
 }
 
 /* ########## contact main section ########## */
 
 #contact-main {
     font-family: 'Signika', sans-serif;
+    width: 95%;
 }
 
 #contact-main .contact-heading {
@@ -96,6 +104,17 @@ body {
 
 #contact-main address i {
     padding-right: 10px;
+}
+
+@media screen and (max-width:700px) {
+    #contact-main address i {
+        display: block;
+        text-align: center;
+    }
+
+    #contact-main address p {
+        text-align: center;
+    }
 }
 
 #contact-main a {
@@ -200,11 +219,11 @@ body {
 }
 
 #projects-main .tab-content .project-item .column1 {
-    flex: 1 400px;
+    flex: 1 0 400px;
 }
 
 #projects-main .tab-content .project-item .column2 {
-    flex: 10 400px;
+    flex: 10 0 400px;
     margin: 10px;
 }
 

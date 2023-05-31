@@ -1,3 +1,4 @@
+// Click Tab show tab content
 function openProjectTab(event, projectName) {
   let i, tabContent, tabLinks;
   tabContent = document.getElementsByClassName("tab-content");

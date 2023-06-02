@@ -268,6 +268,10 @@ body {
     margin: 5px;
 }
 
+#footer i {
+    color: #551A8B;
+}
+
 #footer i:hover {
     background-color: #333;
     color: #f9f9f9;

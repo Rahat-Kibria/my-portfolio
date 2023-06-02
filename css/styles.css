@@ -144,7 +144,11 @@ body {
     text-align: center;
 }
 
-#cv-main #viewer {
+/* #cv-main #viewer {
+    padding: 0px 20px;
+} */
+
+#cv-main object {
     padding: 0px 20px;
 }
 

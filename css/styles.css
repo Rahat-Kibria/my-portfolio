@@ -82,12 +82,11 @@ body {
 
 #contact-main {
     font-family: 'Signika', sans-serif;
-    width: 95%;
 }
 
 #contact-main .contact-heading {
     font-size: 2rem;
-    margin: 30px;
+    margin: 30px 0;
     text-align: center;
 }
 
@@ -121,8 +120,6 @@ body {
     font-size: 1.5rem;
     text-decoration: none;
     color: #551A8B;
-    margin: 0;
-    padding: 0;
 }
 
 #contact-main a:hover {

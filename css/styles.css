@@ -171,7 +171,7 @@ body {
     justify-content: center;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:751px) {
     #projects-main .tab button {
         background-color: inherit;
         float: left;

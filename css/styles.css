@@ -1,5 +1,8 @@
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 * {
@@ -8,11 +11,14 @@ html {
 }
 
 *, *::before, *::after {
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
 body {
     background-color: #f9f9f9;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ########## header section ########## */
@@ -29,6 +35,12 @@ body {
     margin: 10px;
 }
 
+@media screen and (max-width:600px) {
+    #header h1 {
+        font-size: 1.7rem;
+    }
+}
+
 #header h1>a {
     text-decoration: none;
     color: #551A8B;
@@ -43,11 +55,28 @@ body {
     margin: 10px;
 }
 
+@media screen and (max-width:600px) {
+    #header h2 {
+        font-size: 1.2rem;
+    }
+}
+
 #header nav>a {
     margin-right: 10px;
     text-decoration: none;
     font-size: 1.5rem;
+    font-weight: bold;
     color: #551A8B;
+    padding: 3px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width:600px) {
+    #header nav>a {
+        font-size: 1.3rem;
+    }
 }
 
 #header nav>a:hover {
@@ -62,7 +91,7 @@ body {
     max-width: 900px;
     width: 95%;
     text-align: justify;
-    margin-top: 30px;
+    padding-top: 30px;
     margin: 0 auto;
 }
 
@@ -78,6 +107,12 @@ body {
     margin: 10px;
 }
 
+@media screen and (max-width:600px) {
+    #main p {
+        font-size: 1.2rem;
+    }
+}
+
 /* ########## contact main section ########## */
 
 #contact-main {
@@ -90,11 +125,23 @@ body {
     text-align: center;
 }
 
+@media screen and (max-width:600px) {
+    #contact-main .contact-heading {
+        font-size: 1.7rem;
+    }
+}
+
 #contact-main address {
     font-size: 1.5rem;
     display: block;
     width: fit-content;
     margin: 0 auto;
+}
+
+@media screen and (max-width:600px) {
+    #contact-main address {
+        font-size: 1.2rem;
+    }
 }
 
 #contact-main address p {
@@ -122,6 +169,12 @@ body {
     color: #551A8B;
 }
 
+@media screen and (max-width:600px) {
+    #contact-main a {
+        font-size: 1.2rem;
+    }
+}
+
 #contact-main a:hover {
     color: #333;
     background-color: #eee;
@@ -132,7 +185,6 @@ body {
 #cv-main {
     font-family: 'Signika', sans-serif;
     text-align: center;
-    font-size: 1.5rem;
 }
 
 #cv-main .cv-heading {
@@ -141,15 +193,20 @@ body {
     text-align: center;
 }
 
-#cv-main object {
-    padding: 0px 20px;
+@media screen and (max-width:600px) {
+    #cv-main .cv-heading {
+        font-size: 1.7rem;
+    }
+}
+
+#cv-main #cloud_pdf {
+    padding: 0px 10px;
 }
 
 /* ########## project main section ########## */
 
 #projects-main {
     font-family: 'Signika', sans-serif;
-    font-size: 1.5rem;
 }
 
 #projects-main .project-heading {
@@ -158,38 +215,40 @@ body {
     text-align: center;
 }
 
+@media screen and (max-width:600px) {
+    #projects-main .project-heading {
+        font-size: 1.7rem;
+    }
+}
+
 #projects-main .tab {
-    /* overflow: hidden; */
+    overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width: 97.3%;
+    max-width: 98.4%;
+    width: 98.4%;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
-@media screen and (min-width:751px) {
-    #projects-main .tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        font-size: 1.5rem;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.5s;
-    }
+#projects-main .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    font-family: 'Signika', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.5s;
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:600px) {
     #projects-main .tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.5s;
+        font-size: 0.8rem;
+        padding: 7px 8px;
     }
 }
 
@@ -203,7 +262,7 @@ body {
 
 #projects-main .tab-content {
     display: none;
-    padding: 6px 12px;
+    padding: 6px 6px;
     border-top: none;
 }
 
@@ -216,12 +275,12 @@ body {
 }
 
 #projects-main .tab-content .project-item .column1 {
-    flex: 1 0 400px;
+    flex: 1 0 300px;
 }
 
 #projects-main .tab-content .project-item .column2 {
-    flex: 10 0 400px;
-    margin: 10px;
+    flex: 10 0 300px;
+    padding: 5px 5px 5px 20px;
 }
 
 #projects-main .tab-content .project-item .column1 img {
@@ -229,26 +288,69 @@ body {
     height: 98%;
 }
 
+@media screen and (max-width:600px) {
+    #projects-main .tab-content .project-item .column1 img {
+        width: 88%;
+    }
+}
+
 #projects-main .tab-content .project-item .column2 h3 {
     margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width:750px) {
+    #projects-main .tab-content .project-item .column2 h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #projects-main .tab-content .project-item .column2 h3 {
+        font-size: 1.2rem;
+    }
 }
 
 #projects-main .tab-content .project-item .column2 p {
     margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:750px) {
+    #projects-main .tab-content .project-item .column2 p {
+        width: 88%;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #projects-main .tab-content .project-item .column2 p {
+        width: 88%;
+        font-size: 1.2rem;
+    }
 }
 
 #projects-main .tab-content .project-item .project-btn {
-    color: #F7FFF7;
-    background: #2F3061;
+    color: #551A8B;
     text-decoration: none;
+    font-size: 1.4rem;
     margin-top: 10px;
     padding: 8px;
     border-radius: 4px;
+    border: 1px solid #ccc;
     display: inline-block;
 }
 
+@media screen and (max-width:750px) {
+    #projects-main .tab-content .project-item .project-btn {
+        font-size: 1rem;
+    }
+}
+
 #projects-main .tab-content .project-item .project-btn:hover {
-    background: rgba(47, 48, 97, 80%);
+    color: #333;
+    background: #eee;
 }
 
 /* ######### footer section ######### */
@@ -264,12 +366,19 @@ body {
     margin: 10px;
 }
 
+@media screen and (max-width:600px) {
+    #footer p {
+        font-size: 1rem;
+    }
+}
+
 #footer a {
     margin: 5px;
 }
 
 #footer i {
     color: #551A8B;
+    font-size: 1.5rem;
 }
 
 #footer i:hover {

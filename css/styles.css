@@ -203,6 +203,28 @@ body {
     padding: 0px 10px;
 }
 
+#cv-main .cv-download-btn {
+    color: #551A8B;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+@media screen and (max-width:750px) {
+    #cv-main .cv-download-btn {
+        font-size: 1rem;
+    }
+}
+
+#cv-main .cv-download-btn:hover {
+    color: #333;
+    background: #eee;
+}
+
 /* ########## project main section ########## */
 
 #projects-main {
